@@ -1,0 +1,327 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Style rules for mobile viewport */
+.mobile,
+.mobile-tablet {
+  display: block;
+}
+
+.tab-desk,
+.desktop {
+  display: none;
+}
+
+/* Header Styling - TASK 3, STEP 9 */
+.mobile h1,
+.mobile h3 {
+  padding: 2%;
+  text-align: center;
+}
+
+/* TASK 3, STEP 10: Google Fonts Typography */
+.mobile h1 {
+  font-family: "Pacifico", cursive; /* Applied Emblema One */
+  font-size: 2em;
+  color: #2a1f14;
+}
+
+.mobile h3 {
+  font-family: "Edu SA Hand", cursive; /* Applied Lora to mobile h3 */
+  font-size: 1.2em;
+  color: #2a1f14;
+}
+
+/* TASK 3, STEP 10: Lora as main font for main element */
+main {
+  font-family: "Edu SA Hand", cursive; /* Applied Lora to main element */
+  padding: 2%;
+  line-height: 1.6;
+  color: #2a1f14;
+}
+
+/* Navigation - TASK 4, STEP 11 */
+nav {
+  background-color: #2a1f14;
+  padding: 1%;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav li {
+  display: block; /* Vertical navigation for mobile */
+  border-top: 0.5px solid #f6eee4; /* Top border */
+  font-size: 1.1em;
+  padding: 0.5em;
+}
+
+nav li:first-child {
+  border-top: none;
+}
+
+nav li a {
+  display: block;
+  color: #f6eee4;
+  text-decoration: none;
+  font-family: "Lora", serif; /* Also apply Lora to nav links */
+  padding: 0.5em 1em;
+}
+
+nav li a:hover {
+  background-color: #4a3c2a;
+  color: #fff;
+}
+
+/* Image Styling - TASK 4, STEP 13 */
+.round {
+  border-radius: 6px;
+  display: block;
+  margin: 2% auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style rules for skip navigation link */
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  color: #fff;
+  background-color: #2a1f14;
+  text-decoration: none;
+  padding: 0.5%;
+  top: auto;
+  left: auto;
+  right: 1px;
+  z-index: 1;
+}
+
+/* TASK 5, STEP 15: Link Button Styling */
+.tel-link {
+  background-color: #2a1f14;
+  padding: 2%;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.tel-link a {
+  color: #f6eee4;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+/* Main Content */
+main h2,
+#form h2 {
+  font-family: "Edu SA Hand", cursive; /* Apply Lora to h2 in main */
+  color: #2a1f14;
+  margin: 2% 0;
+  text-align: center;
+}
+
+main p {
+  margin-bottom: 1.5em;
+  padding: 0 2%;
+}
+
+#welcome,
+#latest,
+#info,
+#contact {
+  margin-bottom: 3em;
+}
+
+/* Lists in main content */
+main ul {
+  margin-left: 5%;
+  margin-bottom: 1.5em;
+}
+
+main li {
+  margin-bottom: 0.5em;
+}
+
+/* Links in main content */
+main a {
+  color: #4a3c2a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+.contact-email {
+  color: #2a1f14;
+}
+
+/* Style rules for form elements */
+fieldset,
+input,
+textarea {
+  margin-bottom: 2%;
+}
+
+fieldset legend {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+label {
+  display: block;
+  padding-top: 2%;
+}
+
+#submit {
+  margin: 0 auto;
+  display: block;
+  padding: 2%;
+  background-color: #78593a;
+  color: #f6eee4;
+  font-size: 1.25em;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #2a1f14;
+  color: #f6eee4;
+  text-align: center;
+  padding: 2%;
+  font-family: "Edu SA Hand", cursive; /* Apply Lora to footer */
+  margin-top: 2em;
+}
+
+footer p {
+  margin: 0.5em 0;
+}
+
+.social img {
+  display: inline-block;
+  padding: 4%;
+}
+
+/* Media Query for Tablet/Desktop Viewports */
+@media only screen and (min-width: 768px) {
+  /* Desktop Viewport: Show desktop class, hide mobile-tablet class */
+  .desktop {
+    display: block;
+    text-align: center;
+    padding: 2%;
+  }
+
+  .mobile-tablet {
+    display: none;
+  }
+
+  /* Horizontal Navigation */
+  nav li {
+    display: inline-block;
+    border: none;
+    margin: 0 1%;
+  }
+
+  nav ul {
+    padding: 1%;
+  }
+
+  /* Layout adjustments */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2% 5%;
+  }
+
+  #welcome,
+  #latest {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  #latest {
+    margin-right: 0;
+  }
+
+  /* Tablet Viewport: Style rule for form element */
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  /* Tablet Viewport: Style rules for footer area */
+  footer {
+    overflow: auto;
+  }
+
+  .copyright {
+    float: left;
+    width: 65%;
+  }
+
+  .social {
+    float: right;
+    width: 25%;
+  }
+
+  /* Style rules for table */
+  table {
+    border: 1px solid #2a1f14;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+  }
+
+  th,
+  td {
+    border: 1px solid #2a1f14;
+    padding: 1%;
+  }
+
+  th {
+    background-color: #2a1f14;
+    color: #fff;
+    font-size: 1.15em;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #deccba;
+  }
+
+  /* Desktop Viewport: Style rules for form elements */
+  form {
+    width: auto;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+
+  .btn {
+    grid-column: 1 / span 2;
+  }
+}
